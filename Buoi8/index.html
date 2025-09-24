@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let thongTinDonHang = {
+            maDonHang: "12345678",
+            thongTinKhachHang: {
+                hoTen: "MinhHieu",
+                soDienThoai: "0987654321",
+                trangThaiThanhVienThanThiet: false,
+            },
+            danhSachSanPham: {
+                sp01: {
+                    maSanPham: "1",
+                    tenSanPham: "Matcha",
+                    soLuong: 10,
+                    giaTien: 10000,
+                },
+                sp02: {
+                    maSanPham: "2",
+                    tenSanPham: "Cà phê",
+                    soLuong: 10,
+                    giaTien: 20000,
+                },
+                sp03: {
+                    maSanPham: "3",
+                    tenSanPham: "Trà sữa",
+                    soLuong: 15,
+                    giaTien: 20000,
+                }
+            },
+            thanhToanThanhCong: true,
+            diaChiGiaoHang: "Đông Ngạc"
+        }
+        let tong1 = thongTinDonHang.danhSachSanPham.sp01.soLuong * thongTinDonHang.danhSachSanPham.sp01.giaTien;
+        
+        
+        let tong2 = thongTinDonHang.danhSachSanPham.sp02.soLuong * thongTinDonHang.danhSachSanPham.sp02.giaTien;
+        let tong3 = tong1+tong2 ;
+        // document.write("Do dai cua ma don hang la :" +thongTinDonHang.maDonHang.length);
+        //length: do dai cua chuoi ;
+        var myString ="hello ducaNh";   
+        document.writeln(myString.split(""));
+        //includes : kiem tra chuoi con co trong chuoi cha hay khong , tra ve true hoac false ;
+        //myString.slice(1,4) : lay ra ky tu tu vi tri 1 den vi tri 4 ( khong lay vi tri 4) ;
+        //Mystring[2] : lay ra ky tu o vi tri thu 2 cua chuoi ;
+        //myString.replace("hello","hi") : thay the chuoi hello bang chuoi hi ;
+        //myString.toUpperCase() : chuyen chuoi thanh chuoi in hoa ;
+        //myString.toLowerCase() : chuyen chuoi thanh chuoi in thuong ;
+        //indexOf : tim kiem chuoi con trong chuoi cha và hiện vị trí ;
+        //split : cat chuoi thanh cac phan tu trong mang ;
+        
+        let danhSach = ["MinhHieu","DucAnh","NguyenVanA","NguyenVanB"];
+        document.writeln(danhSach[1].startsWith("Anh"));
+        //startsWith : kiem tra chuoi bat dau bang chuoi con hay khong , tra ve true hoac false ;
+        let so = 123 ;
+        document.writeln(typeof(so));
+        //typeof : kiem tra kieu du lieu cua bien ;
+        parseInt("10.5") ;
+        parseFloat("10.5") ;    
+        //parseInt : chuyen chuoi thanh so nguyen ;
+        //parseFloat : chuyen chuoi thanh so thuc ;
+            // var pi = 3.28913781238217989218913312 ; 
+            // document.writeln(pi.toFixed(2)+"<br>");
+            // //toFixed : lam tron so thuc den so chu so thap phan mong muon ;
+            // isNaN(Nan);
+            // //isNaN : kiem tra xem co phai la so hay khong , tra ve true hoac false ;
+            // isFinite(10);    
+        //isFinite : kiem tra xem co phai la so huu han hay khong , tra ve true hoac false ;
+        let toDay = new Date();
+        document.writeln(toDay.getDay()); 
+        //getDate : lay ra ngay trong thang ( tu 1 den 31) ;
+        //getDay : lay ra thu trong tuan ( tu 0 den 6 , 0 la chu nhat) ;
+        //getFullYear : lay ra nam ( 4 chu so) ;
+        //getHours : lay ra gio ( tu 0 den 23) ;
+        //getMinutes : lay ra phut ( tu 0 den 59) ;
+        //getSeconds : lay ra giay ( tu 0 den 59) ;
+
+
+       
+    </script>
+</body>
+</html>
