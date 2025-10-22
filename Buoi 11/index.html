@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 11</title>
+</head>
+<body>
+    <h1>Bài 11</h1>
+    <!--Tạo hàm JS tính điểm của 
+    sinh viên dựa vào 3 điểm A,B,C biết điểm tổng = A*0,6 + B*0,3 + C*0,1 -->
+    <h2>Hàm tính điểm sinh viên</h2>
+    <div>Diem A: <input type="number" id="diemA" placeholder="Nhập điểm A"> <br></div>
+    <div>Diem B: <input type="number" id="diemB" placeholder="Nhập điểm B"> <br></div>
+    <div>Diem C: <input type="number" id="diemC" placeholder="Nhập điểm C"> <br></div>
+    <div><button onclick="tinhDiem()">Tính điểm</button></div>
+    <div>Ket Qua: <input type="text" id="ketQua"></div>
+    <script>
+        function xemKetQua(){
+            let diemA = document.getElementById("diemA").value;
+            let diemB = document.getElementById("diemB").value;
+            let diemC = document.getElementById("diemC").value;
+            tinhDiem(diemA, diemB, diemC);
+        }
+
+        function tinhDiem(a,b,c) {
+            let tong;
+            if(kiemTraHopLe(a,b,c) == true){
+                tong = a*0.6 + b*0.3 + c*0.1;
+                document.writeln(tong + "<br>");
+            }
+            if(tong >= 9 && tong <=10){
+                document.writeln("Diem chu la A+" + "<br>");
+            } else if (tong >= 8 && tong <9){
+                document.writeln("Diem chu la A" + "<br>");
+            } else if (tong >= 7 && tong <8){
+                document.writeln("Diem chu la B" + "<br>");
+            } else if (tong >= 4 && tong <7){
+                document.writeln("Diem chu la C" + "<br>");
+            } else if (tong >=0 && tong <4){
+                document.writeln("Diem chu la F" + "<br>");
+            }
+        }
+
+        function kiemTraHopLe(){
+            if(a<0 || a>10 || typeof (a) != "number"){
+                document.writeln("Diem A khong hop le!" + "<br>")
+                ketQua = false;
+            }
+            if(b<0 || b>10 || typeof (b) != "number"){
+                document.writeln("Diem B khong hop le!" + "<br>")
+                ketQua = false;
+            }
+            if(c<0 || c>10 || typeof (c) != "number"){
+                document.writeln("Diem C khong hop le!" + "<br>")
+                ketQua = false;
+            } 
+            return ketQua;
+        }
+        
+    </script>
+</body>
+</html>
