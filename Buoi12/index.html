@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            justify-content: center;
+            text-align: center  ;
+        }
+        .anh{
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <h2>Ví dụ về chế độ sáng tối</h2>
+    <div class="anh" >
+        <img src="mattroi.jpg" alt="" >
+    </div>
+    <h2>Chế độ sáng</h2>
+    <button onclick="doiCheDo()">Đổi chế độ</button>
+
+<script>
+    let cheDo = true;
+    function doiCheDo() {
+        if (cheDo == true) { 
+        document.getElementsByTagName("body")[0].style = " background-color: black ";
+        document.getElementsByTagName("h2")[1].innerHTML = " Chế độ :Tối ";
+        document.getElementsByTagName("h2")[0].style = "color : white";
+        document.getElementsByTagName("h2")[1].style = "color : white";
+        document.getElementsByTagName("img")[0].src = "mattrang.jpg";
+        cheDo = false ;
+    }
+    else {
+        document.getElementsByTagName("body")[0].style = " background-color: white ";
+        document.getElementsByTagName("h2")[1].innerHTML = " Chế độ :Tối ";
+        document.getElementsByTagName("h2")[0].style = "color : black";
+        document.getElementsByTagName("h2")[1].style = "color : black";
+        document.getElementsByTagName("img")[0].src = "mattroi.jpg";
+        cheDo = true ; 
+    }
+}
+</script>
+</body>
+</html>
